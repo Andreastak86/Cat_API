@@ -5,20 +5,12 @@ import axios from "axios";
 function App() {
   const [fact, setFact] = useState("");
 
-  // function getRandomCatFact(fct) {
-  //   const randomFact = Math.floor(Math.random() * fct.length);
-  //   const hardFact = fct[randomFact];
-  //   return hardFact;
-  // }
-  // const results = getRandomCatFact(setFact);
-
   const getFact = () => {
     axios.get("https://catfact.ninja/facts").then((response) => {
       console.log(response.data.data);
       const listOfFact = response.data.data;
       setFact(listOfFact[9].fact);
       console.log(fact);
-      // console.log(results);
     });
   };
 

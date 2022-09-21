@@ -14,6 +14,10 @@ function App() {
     });
   };
 
+  if noFact {
+    
+  }
+
   return (
     <div>
       <h1> KittyCat Facts</h1>
